@@ -1,4 +1,13 @@
 <script>
+  import { tick } from "svelte";
+  import { Confetti } from "svelte-confetti";
+  let active = false;
+  async function showConfetti() {
+active = false;
+await tick();
+active = true;
+}
+
 
   import "carbon-components-svelte/css/all.css";
   import {
@@ -32,7 +41,7 @@
     <HeaderNavItem href="/" text="Home" />
     <HeaderNavMenu text="Menu">
       <HeaderNavItem href="/shop" data-sveltekit-preload-data text="Shop" />
-      <HeaderNavItem href="/movies" data-sveltekit-preload-data text="Movies" />
+      <HeaderNavItem href="/movies" text="Movies" />
       <HeaderNavItem href="/gopherizeme" data-sveltekit-preload-data text="Antoinize Me" />
       <HeaderNavItem href="/wp-api-json" data-sveltekit-preload-data text="WP-JSON" />
     </HeaderNavMenu>
@@ -44,6 +53,10 @@
     <Row>
       <Column>
         <h1>Welcome</h1>
+<button on:click={showConfetti}>Show some confetti</button>
+{#if active}
+<Confetti />
+{/if}
       </Column>
     </Row>
   </Grid>
