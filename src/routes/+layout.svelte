@@ -1,5 +1,6 @@
 <script>
-import "carbon-components-svelte/css/all.css";
+
+  import "carbon-components-svelte/css/all.css";
   import {
     Theme,
     RadioButtonGroup,
@@ -7,32 +8,54 @@ import "carbon-components-svelte/css/all.css";
   } from "carbon-components-svelte";
 
   let theme = "g80";
+
+  import {
+    Header,
+    HeaderNav,
+    HeaderNavItem,
+    HeaderNavMenu,
+    SkipToContent,
+    Content,
+    Grid,
+    Row,
+    Column,
+  } from "carbon-components-svelte";
+
+  let isSideNavOpen = false;
 </script>
 
-<Theme bind:theme />
+<Header company="Big Daddy" platformName="Carbon Svelte" bind:isSideNavOpen>
+  <svelte:fragment slot="skip-to-content">
+    <SkipToContent />
+  </svelte:fragment>
+  <HeaderNav>
+    <HeaderNavItem href="/" text="Home" />
+    <HeaderNavItem href="/shop" data-sveltekit-preload-data text="Shop" />
+    <HeaderNavItem href="/movies" data-sveltekit-preload-data text="Movies" />
+    <HeaderNavItem href="/gopherizeme" data-sveltekit-preload-data text="Antoinize Me" />
+    <HeaderNavItem href="/wp-api-json" data-sveltekit-preload-data text="WP-JSON" />
 
-<RadioButtonGroup legendText="Carbon theme" bind:selected={theme}>
-  {#each ["white", "g10", "g80", "g90", "g100"] as value}
-    <RadioButton labelText={value} {value} />
-  {/each}
-</RadioButtonGroup>
+    <HeaderNavMenu text="Menu">
+      <HeaderNavItem href="/gopherizeme" data-sveltekit-preload-data text="Antoinize Me" />
+      <HeaderNavItem href="/wp-api-json" data-sveltekit-preload-data text="WP-JSON" />
+    </HeaderNavMenu>
+  </HeaderNav>
+</Header>
 
-<nav>
-<a href="/">Home</a>
-<a href="/shop" data-sveltekit-preload-data>Shop</a>
-<a href="/movies" data-sveltekit-preload-data>Movies</a>
-<a href="/gopherizeme" data-sveltekit-preload-data>Antoinize Me</a>
-<a href="/wp-api-json" data-sveltekit-preload-data>WP-JSON</a>
+<Content>
+  <Grid>
+    <Row>
+      <Column>
+        <h1>Welcome</h1>
+      </Column>
+    </Row>
+  </Grid>
+</Content>
 
-</nav>
+
+
+
+
 <slot />
 
 
-<style>
-nav {
-display: flex;
-}
-nav a {
-margin-right: 1rem;
-}
-</style>
