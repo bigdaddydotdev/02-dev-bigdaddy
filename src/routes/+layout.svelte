@@ -6,13 +6,13 @@ import "carbon-components-svelte/css/all.css";
     RadioButton,
   } from "carbon-components-svelte";
 
-  let theme = "g90";
+  let theme = "g80";
 </script>
 
 <Theme bind:theme />
 
 <RadioButtonGroup legendText="Carbon theme" bind:selected={theme}>
-  {#each ["white", "p10", "p80", "p90", "p100"] as value}
+  {#each ["white", "g10", "g80", "g90", "g100"] as value}
     <RadioButton labelText={value} {value} />
   {/each}
 </RadioButtonGroup>
