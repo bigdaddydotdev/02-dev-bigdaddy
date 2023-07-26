@@ -30,12 +30,9 @@
   </svelte:fragment>
   <HeaderNav>
     <HeaderNavItem href="/" text="Home" />
-    <HeaderNavItem href="/shop" data-sveltekit-preload-data text="Shop" />
-    <HeaderNavItem href="/movies" data-sveltekit-preload-data text="Movies" />
-    <HeaderNavItem href="/gopherizeme" data-sveltekit-preload-data text="Antoinize Me" />
-    <HeaderNavItem href="/wp-api-json" data-sveltekit-preload-data text="WP-JSON" />
-
     <HeaderNavMenu text="Menu">
+      <HeaderNavItem href="/shop" data-sveltekit-preload-data text="Shop" />
+      <HeaderNavItem href="/movies" data-sveltekit-preload-data text="Movies" />
       <HeaderNavItem href="/gopherizeme" data-sveltekit-preload-data text="Antoinize Me" />
       <HeaderNavItem href="/wp-api-json" data-sveltekit-preload-data text="WP-JSON" />
     </HeaderNavMenu>
