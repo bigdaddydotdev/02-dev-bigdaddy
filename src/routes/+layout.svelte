@@ -46,7 +46,7 @@ active = true;
       <HeaderNavItem href="/movies" text="Movies" />
       <HeaderNavItem href="/gopherizeme" data-sveltekit-preload-data text="Antoinize Me" />
       <HeaderNavItem href="/wp-api-json" data-sveltekit-preload-data text="WP-JSON" />
-     <HeaderNavItem href="/rss data-sveltekit-preload-data text="RSS" />
+     <HeaderNavItem href="/rss" data-sveltekit-preload-data text="RSS" />
 
     </HeaderNavMenu>
   </HeaderNav>
