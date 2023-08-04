@@ -1,4 +1,5 @@
 <script>
+// @ts-ignore
 import { Confetti } from "svelte-confetti"
 import { tick } from "svelte";
 
