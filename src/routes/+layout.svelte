@@ -48,7 +48,8 @@ active = true;
       <HeaderNavItem href="/gopherizeme" data-sveltekit-preload-data text="Antoinize Me" />
 <HeaderNavItem href="/rss" data-sveltekit-preload-data text="RSS" />
       <HeaderNavItem href="/wp-api-json" data-sveltekit-preload-data text="WP-JSON" />
-     
+     <HeaderNavItem href="/keyframe" data-sveltekit-preload-data text="Key-Frame" />
+
     </HeaderNavMenu>
   </HeaderNav>
 </Header>
