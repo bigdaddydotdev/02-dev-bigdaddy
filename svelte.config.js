@@ -18,9 +18,6 @@ export default {
 			},
 			platformProxy: {
 				configPath: 'wrangler.toml',
-				environment: undefined,
-				experimentalJsonConfig: false,
-				persist: false
 			}
 		}
         })
