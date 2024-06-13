@@ -15,7 +15,13 @@ export default {
             routes: {
                 include: ['/*'],
                 exclude: ['<all>']
-            }
+			},
+			platformProxy: {
+				configPath: 'wrangler.toml',
+				environment: undefined,
+				experimentalJsonConfig: false,
+				persist: false
+			}
+		}
         })
-    }
 };
